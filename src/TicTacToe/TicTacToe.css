@@ -1,0 +1,171 @@
+.my-application {
+  display: flex;
+  flex-direction: column;
+}
+.my-application header {
+  height: 15vh;
+  background: #9D8189;
+  color: #fff;
+  text-align: center;
+  line-height: 15vh;
+}
+.my-application header h1 {
+  margin: 0;
+}
+.my-application .game {
+  height: 85vh;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #fefdfd;
+}
+@media only screen and (min-width: 1024px) {
+  .my-application .game {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.my-application .game .game-board {
+  width: 270px;
+  margin: 30px auto 0;
+  overflow: hidden;
+  padding: 20px;
+  background: #FFCAD4;
+  box-sizing: border-box;
+  border: 1px solid #e0b4bc;
+}
+@media only screen and (min-width: 1024px) {
+  .my-application .game .game-board {
+    width: 500px;
+    margin: 0 auto 0 2em;
+  }
+}
+.my-application .game .game-board .square {
+  width: 74px;
+  height: 74px;
+  display: inline-block;
+  float: left;
+  border: 1px solid #fff;
+  line-height: 74px;
+  text-align: center;
+  font-size: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #F4ACB7;
+  transition: 0.25s;
+}
+@media only screen and (min-width: 1024px) {
+  .my-application .game .game-board .square {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 5em;
+  }
+}
+.my-application .game .game-board .square:not(.locked):not(.square-o):not(.square-x):hover {
+  background: #d599a2;
+}
+.my-application .game .game-board .square.square-o {
+  color: #a80404;
+}
+.my-application .game .game-board .square.square-x {
+  color: #1b5fdc;
+}
+.my-application .game .players-info {
+  width: 270px;
+  padding: 20px;
+  margin: auto;
+  box-sizing: border-box;
+  background: #D8E2DC;
+  border: 1px solid #cfd8d3;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .my-application .game .players-info {
+    margin: 0 2em 0 auto;
+    width: 320px;
+  }
+}
+.my-application .game .players-info .player {
+  margin-bottom: 10px;
+}
+.my-application .game .players-info .player .mark {
+  text-transform: uppercase;
+  border: 1px solid #b1b7b3;
+  border-radius: 4px;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  margin-right: 5px;
+}
+.my-application .game .players-info .player .score {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url("./images/badge.png") no-repeat;
+  background-size: 28px;
+  text-align: center;
+  margin-left: 5px;
+  filter: grayscale(90%);
+  transition: 0.4s;
+}
+.my-application .game .players-info .player.winner-player .score {
+  filter: grayscale(0%);
+}
+.my-application .game .players-info .player input {
+  width: 138px;
+  border: none !important;
+  line-height: 28px;
+  -webkit-appearance: none;
+  outline: 0 !important;
+  padding: 0 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+@media only screen and (min-width: 1024px) {
+  .my-application .game .players-info .player input {
+    width: 186px;
+  }
+}
+.my-application .game .players-info .player::before {
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-color: transparent;
+  content: "";
+  display: inline-block;
+  height: 9px;
+  position: relative;
+  top: 6px;
+  vertical-align: top;
+  width: 8px;
+  left: 0;
+  transform: rotate(45deg);
+  margin-right: 8px;
+  transition: 0.1s;
+}
+.my-application .game .players-info button {
+  border: none;
+  width: 50%;
+  display: block;
+  margin: 12px auto 0;
+}
+.my-application .game .players-info button:focus {
+  outline: none !important;
+}
+.my-application .game .players-info button.newGame {
+  background: #00e446;
+  line-height: 30px;
+  font-size: 1em;
+  color: #333;
+}
+.my-application .game .players-info button.resetScore {
+  background: #bf3030;
+  color: #fff;
+  font-size: 0.8em;
+  line-height: 27px;
+}
+.my-application .game:not(.finished) .players-info .player.current-player::before {
+  border-color: red;
+}
+
+/*# sourceMappingURL=TicTacToe.css.map */
