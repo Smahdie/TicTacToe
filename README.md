@@ -1,7 +1,7 @@
 # TicTacToe
 This is a Tic Tac Toe game that I developed using react@16.13.0. 
 
-![screenshot](/public/screenshot.jpg)
+![screenshot](/public/screenshot.jpeg)
 
 The Game features:
 - Has editable player names
